@@ -1,0 +1,2 @@
+module SessionManagerHelper
+end

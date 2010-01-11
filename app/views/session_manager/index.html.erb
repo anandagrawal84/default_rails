@@ -1,0 +1,11 @@
+<% form_for @user, :url => {:action => :login} do |user| %>
+    <%= flash["invalid_credentials"] %>
+    <br/>
+    User name <%= user.text_field :user_name %>
+    <br/>
+    Password <%= user.text_field :password %>
+    <br/>
+
+    <%= user.submit "Login" %>
+
+<% end %>

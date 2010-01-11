@@ -1,0 +1,16 @@
+<h1>New book</h1>
+
+<% form_for(@book) do |f| %>
+  <%= f.error_messages %>
+    Name: <%= f.text_field :name %>
+    <br/>
+    Isbn: <%= f.text_field :isbn %>
+    <br/>
+    Author: <%= f.select :author_id, @authors.collect {|a| [a.name, a.id] } %>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', books_path %>
